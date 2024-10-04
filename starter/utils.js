@@ -1,9 +1,9 @@
 /**
- * Gets the number in the Number 1 input box.
+ * Returns the number in the principal input box.
  * @returns The number if it exists, else null
  */
-function getNum1() {
-    const inp = document.getElementById('num1').value.trim();
+function getPrincipal() {
+    const inp = document.getElementById('principal').value.trim();
     if (inp === '') {
         return null;
     } else {
@@ -12,14 +12,33 @@ function getNum1() {
 }
 
 /**
- * Gets the number in the Number 2 input box.
+ * Returns the number in the return rate as a number, e.g. 7% returns 7.
  * @returns The number if it exists, else null
  */
-function getNum2() {
-    const inp = document.getElementById('num2').value.trim();
+function getReturnPerc() {
+    const inp = document.getElementById('return-rate').value.trim();
     if (inp === '') {
         return null;
     } else {
         return parseInt(inp);
     }
 }
+
+/**
+ * Returns the number in the number of years input box.
+ * @returns The number if it exists, else null
+ */
+function getNumOfYears() {
+    const inp = document.getElementById('num-years').value.trim();
+    if (inp === '') {
+        return null;
+    } else {
+        return parseInt(inp);
+    }
+}
+
+function updateReturnRateDisplay() {
+    document.getElementById("return-rate-display").innerText = document.getElementById("return-rate").value + "%";
+}
+
+window.onload = updateReturnRateDisplay;

@@ -1,16 +1,9 @@
 console.log("Hello world!")
 
 function calculate() {
-    let n1 = getNum1();
-    if (n1 === null) {
-        alert("Please enter Number 1!")
-    } else {
-        let n2 = getNum2();
-        if (n2 === null) {
-            alert("Please enter Number 2!")
-        } else {
-            let sum = n1 + n2;
-            alert("The sum is " + sum)
-        }
-    }
+	const principal = getPrincipal();
+	const interest = 1 + getReturnPerc() / 100;
+	const time = getNumOfYears();
+	const total = principal * interest ** time;
+	alert("You will have $" + total.toFixed(2));
 }

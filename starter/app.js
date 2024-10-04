@@ -1,5 +1,5 @@
 console.log("Hello world!")
 
 function calculate() {
-    // TODO Make your calculation!
+	// TODO Do your calculation!
 }
